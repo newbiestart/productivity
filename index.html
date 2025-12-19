@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Focus<span>Flow</span></div>
+        <button id="theme-toggle" class="icon-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="dashboard">
+        <section class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-tasks blue"></i>
+                <div class="stat-info">
+                    <h3 id="total-tasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-check-circle green"></i>
+                <div class="stat-info">
+                    <h3 id="completed-tasks">0</h3>
+                    <p>Completed</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-hourglass-half orange"></i>
+                <div class="stat-info">
+                    <h3 id="remaining-tasks">0</h3>
+                    <p>Remaining</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <section class="tasks-container">
+                <div class="card-header">
+                    <h2>Daily Tasks</h2>
+                    <form id="task-form">
+                        <input type="text" id="task-input" placeholder="What's the focus today?" required>
+                        <button type="submit" class="btn-primary"><i class="fas fa-plus"></i></button>
+                    </form>
+                </div>
+                <ul id="task-list"></ul>
+            </section>
+
+            <section class="insights-container">
+                <div class="rating-card">
+                    <h3>Daily Productivity</h3>
+                    <div class="slider-wrapper">
+                        <input type="range" id="productivity-slider" min="1" max="10" value="5">
+                        <span id="slider-value">5</span>
+                    </div>
+                    <button id="save-rating" class="btn-secondary">Log Daily Score</button>
+                </div>
+                <div class="chart-card">
+                    <h3>History</h3>
+                    <canvas id="productivityChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
