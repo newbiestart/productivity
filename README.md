@@ -25,7 +25,8 @@ Track tasks, log daily focus, and visualize productivity — fast and simple.
 - Font Awesome  
 
 ---
-
+## To use the project on you own just clone the repo:
+``` https://github.com/newbiestart/productivity.git ```
 ## 📂 Structure
 
 ```text
@@ -33,3 +34,4 @@ Track tasks, log daily focus, and visualize productivity — fast and simple.
 ├── index.html
 ├── style.css
 └── script.js
+
